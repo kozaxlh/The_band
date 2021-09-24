@@ -1,0 +1,127 @@
+/* Modal */
+:root {
+   --main-color-modal: #009688;
+   --font-color: #fff;
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes animatetop {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal.open {
+  display: flex;
+  animation: animatetop 0.4s;
+}
+
+
+.modal-container {
+  position: relative;
+  width: 900px;
+  min-height: 200px;
+  box-shadow: 0 4px 10px 0 rgb(0, 0, 0, 0.3);
+  background: #fff;
+}
+
+@media only screen and (min-width :752px){
+  .modal-container {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width :751px){
+  .modal-container {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width :584px){
+  .modal-container {
+    width: 100%;
+    margin: 0 10px; 
+  }
+}
+
+.modal-container .modal-close {
+  position: absolute;
+  padding: 16px;
+  top: 0;
+  right: 0;
+  color: var(--font-color);
+  background-color: var(--main-color-modal);
+}
+
+.modal-container .modal-header {
+  padding: 42px 16px;
+  text-transform: capitalize;
+  color: var(--font-color);
+  background-color: var(--main-color-modal);
+}
+
+.modal-header .icon-header {
+  margin-right: 8px;
+}
+
+.modal-body.flex-column {
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.modal-body .modal-label {
+  padding: 20px 0 8px;
+}
+
+.modal-body .modal-input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  flex: 1;
+}
+
+.modal-body .buy-ticket {
+   margin: 16px 0;
+   padding: 16px;
+   font-size: 16px;
+   text-transform: uppercase;
+   color: var(--font-color);
+   background-color:var(--main-color-modal) ;
+
+}
+
+.modal-body .modal-footer {
+   display: flex;
+   justify-content: space-between;
+   margin: 16px 0;
+}
+
+.modal-footer .footer-close {
+   padding: 8px 16px;
+   font-size: 16px;
+   color: var(--font-color);
+   background-color: #f44336;
+}
+
+.modal-footer .footer-close  .footer-icon-close {
+   font-size: 12px;
+}
+
+
+
