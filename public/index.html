@@ -5,6 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="../css/responsive.css" />
       <link rel="stylesheet" href="../img/themify-icons/themify-icons.css" />
       <title>The Band</title>
    </head>
@@ -12,10 +13,14 @@
    <body>
       <div id="main">
          <!-- Header -->
-         <header>
-            <nav class="nav-link">
-               <li>
+         <header id="js-header" class="flex-column">
+            <nav class="nav-link flex-column">
+               <li class="flex-column">
                   <a href="#main">Home</a>
+                  <!-- Mobile Menu -->
+                  <button id="mobile-menu" class="btn-list">
+                     <i class="ti-menu icon-search"></i>
+                  </button>
                </li>
                <li>
                   <a href="#about-section">Band</a>
@@ -27,7 +32,7 @@
                   <a href="#contact-section">Contact</a>
                </li>
                <li>
-                  <a>
+                  <a href="#">
                      More
                      <i class="more-icon ti-angle-down"></i>
                   </a>
@@ -44,6 +49,7 @@
                   </ul>
                </li>
             </nav>
+            <!-- PC Search -->
             <button class="search-button">
                <i class="icon-search ti-search"></i>
             </button>
@@ -89,7 +95,7 @@
                      <p>Name</p>
                      <img src="../img/member-avatar.jpg" />
                   </div>
-                  
+
                   <div class="member">
                      <p>Name</p>
                      <img src="../img/member-avatar.jpg" />
@@ -134,7 +140,9 @@
                               Praesent tincidunt sed tellus ut rutrum sed vitae
                               justo.
                            </p>
-                           <button class="js-buy-ticket">Buy Tickets</button>
+                           <button class="js-buy-ticket btn-buy-ticket">
+                              Buy Tickets
+                           </button>
                         </div>
                      </div>
                      <div class="tag-ticket">
@@ -146,7 +154,9 @@
                               Praesent tincidunt sed tellus ut rutrum sed vitae
                               justo.
                            </p>
-                           <button class="js-buy-ticket">Buy Tickets</button>
+                           <button class="js-buy-ticket btn-buy-ticket">
+                              Buy Tickets
+                           </button>
                         </div>
                      </div>
                      <div class="tag-ticket">
@@ -158,7 +168,9 @@
                               Praesent tincidunt sed tellus ut rutrum sed vitae
                               justo.
                            </p>
-                           <button class="js-buy-ticket">Buy Tickets</button>
+                           <button class="js-buy-ticket btn-buy-ticket">
+                              Buy Tickets
+                           </button>
                         </div>
                      </div>
                   </div>
@@ -173,32 +185,51 @@
                   <div class="survey-infor">
                      <i class="ti-location-pin survey-icon"></i>
                      Chicago, US
-                     <br/>
+                     <br />
                      <i class="ti-mobile survey-icon"></i>
-                     Phone: +10002341
-                     <br/>
+                     Phone: <a href="tel:0795156908541">0795156908</a>
+                     <br />
                      <i class="ti-email survey-icon"></i>
-                     Email: a@gmail.com                  
+                     Email:
+                     <a href="mailto:kozaxlh@gmail.com">kozaxlh@gmail.com</a>
                   </div>
                   <div class="survey-comment">
-                     <form action="">
-                        <div class="survey-form flex-column">
-                           <input type="text" name="survey-name" class="survey-input survey-name" placeholder="Name" required>
-                           <input type="email" name="survey-emain" class="survey-input survey-email" placeholder="Email" required><br/>
-                           <input type="text" name="survey-message"  class="survey-input survey-message" placeholder="Message" required>
-                        </div>
-                        <button class="survey-send" type="submit">Send</button>
+                     <form class="survey-form flex-column">
+                        <input
+                           type="text"
+                           name="survey-name"
+                           class="survey-input survey-name"
+                           placeholder="Name"
+                           required
+                        />
+                        <input
+                           type="email"
+                           name="survey-email"
+                           class="survey-input survey-email"
+                           placeholder="Email"
+                           required
+                        />
+                        <input
+                           type="text"
+                           name="survey-message"
+                           class="survey-input survey-message"
+                           placeholder="Message"
+                           required
+                        />
                      </form>
+                     <button class="survey-send" type="submit">Send</button>
                   </div>
                </div>
             </div>
 
             <!-- Image section -->
-            <div class="contain image"></div>
+            <div class="image">
+               <img src="../img/map.jpg" alt="" srcset="" />
+            </div>
          </div>
 
          <!-- Footer -->
-         <footer class ="main-footer">
+         <footer class="main-footer">
             <i class="footer-icon ti-github"></i>
             <i class="footer-icon ti-linkedin"></i>
             <i class="footer-icon ti-twitter-alt"></i>
@@ -218,35 +249,36 @@
                <i class="ti-bag icon-header"></i>
                Tickets
             </div>
-            
+
             <div class="modal-body flex-column">
                <label for="" class="modal-label">
                   <i class="ti-shopping-cart"> </i>
                   Ticket, $15 per person
                </label>
-               <input type="text" class="modal-input" placeholder="How many?">
-               
+               <input type="text" class="modal-input" placeholder="How many?" />
+
                <label for="" class="modal-label">
                   <i class="ti-user"> </i>
                   Send to
                </label>
-               <input type="text" class="modal-input" placeholder="Enter email">
-               
-               <button class="buy-ticket">
-                  Pay <i class="ti-check"></i>
-               </button>
+               <input
+                  type="text"
+                  class="modal-input"
+                  placeholder="Enter email"
+               />
+
+               <button class="buy-ticket">Pay <i class="ti-check"></i></button>
                <footer class="modal-footer">
-                  <button class="footer-close  js-close-button">
+                  <button class="footer-close js-close-button">
                      Close
                      <i class="ti-close footer-icon-close"></i>
                   </button>
-                  <p>
-                     Need <a href="#main">help?</a>
-                  </p>
+                  <p>Need <a href="#main">help?</a></p>
                </footer>
             </div>
          </div>
       </div>
+
       <script src="../src/script.js"></script>
    </body>
 </html>

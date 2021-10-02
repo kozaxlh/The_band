@@ -1,0 +1,95 @@
+/* Tablet + Mobile */
+@media only screen and (max-width: 63.9375em) {
+   .tag-ticket .btn-buy-ticket,
+   .survey-comment .survey-send {
+      padding: 12px 16px;
+   }
+
+   .main-footer {
+      font-size: 20px;
+   }
+
+   .main-footer .footer-icon {
+      padding: 0 8px;
+      font-size: 24px;
+   }
+}
+
+/* Tablet 740px - 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+   .modal-container {
+      width: 600px;
+   }
+}
+
+/* Mobile Landcape */
+@media only screen and (max-width: 50.75em) {
+   .survey,
+   .survey-form {
+      flex-direction: column;
+   }
+
+   .survey-infor,
+   .survey-comment {
+      width: 100%;
+      line-height: 1.8;
+   }
+
+   .survey-form .survey-email {
+      margin-left: 0px;
+   }
+
+   .survey-comment .survey-send {
+      width: 100%;
+   }
+}
+
+/* Mobile < 740px */
+@media only screen and (max-width: 46.1875em) {
+   .flex-column {
+      flex-direction: column;
+   }
+
+   header {
+      overflow: hidden;
+   }
+
+   .nav-link li:first-child {
+      flex-direction: row;
+   }
+
+   .nav-link > li:first-child:hover > a {
+      color: white;
+      background-color: black;
+   }
+
+   .nav-link > li:first-child > a:hover {
+      color: #000;
+      background-color: #ccc;
+   }
+
+   .nav-link li:first-child .btn-list {
+      display: block;
+   }
+
+   .nav-link .sub-nav {
+      position: initial;
+   }
+
+   .nav-link .sub-nav li {
+      background-color: #000;
+   }
+
+   .nav-link .sub-nav a {
+      color: #fff;
+      padding: 0 41px;
+   }
+
+   .search-button {
+      display: none;
+   }
+
+   .tag-ticket .btn-buy-ticket {
+      width: 100%;
+   }
+}
